@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="610" viewBox="0 0 1280 610" role="img" aria-labelledby="title desc">
+  <title id="title">RNFL study: three evidence gates</title>
+  <desc id="desc">First compare commercial and machine learning OCT segmentations with expert-adjudicated boundaries. Then test whether derived RNFL thickness improves prediction of same-visit contrast sensitivity. Finally, in a separate clinical cohort, validate optic neuritis detection and longitudinal multiple sclerosis risk.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f6f9fc}.ink{fill:#12263a}.muted{fill:#526678}.line{stroke:#b7c8d5;stroke-width:3;fill:none}
+      .card{fill:#fff;stroke:#d5e1e9;stroke-width:2}.small{font:500 19px Arial,sans-serif}.body{font:500 22px Arial,sans-serif}
+      .head{font:700 27px Arial,sans-serif}.top{font:700 34px Arial,sans-serif}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#8098aa"/></marker>
+  </defs>
+  <rect class="bg" width="1280" height="610"/>
+  <text class="top ink" font-family="Arial" font-size="34" font-weight="700" x="55" y="66">From a better boundary to a better clinical decision</text>
+  <text class="body muted" font-family="Arial" font-size="22" font-weight="500" x="55" y="105">Three separate questions need three separate tests.</text>
+
+  <rect class="card" x="48" y="145" width="362" height="360" rx="20"/>
+  <rect x="48" y="145" width="362" height="14" rx="7" fill="#137c91"/>
+  <text font-family="Arial" font-size="16" font-weight="700" x="74" y="194" fill="#137c91">1. IMAGING VALIDITY</text>
+  <text class="head ink" font-family="Arial" font-size="27" font-weight="700" x="74" y="236">Which trace is closest</text>
+  <text class="head ink" font-family="Arial" font-size="27" font-weight="700" x="74" y="270">to expert review?</text>
+  <text class="small muted" font-family="Arial" font-size="19" font-weight="500" x="74" y="319">Same held-out OCT eyes</text>
+  <text class="small muted" font-family="Arial" font-size="19" font-weight="500" x="74" y="350">Commercial · 2.5D · 3D · hybrid</text>
+  <line x1="74" y1="375" x2="382" y2="375" stroke="#d5e1e9" stroke-width="2"/>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="74" y="414">Boundary error · thickness bias</text>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="74" y="446">Failures · uncertainty</text>
+
+  <path d="M418 322 H437" stroke="#8098aa" stroke-width="4" fill="none"/>
+  <path d="M437 314 L449 322 L437 330 Z" fill="#8098aa"/>
+
+  <rect class="card" x="458" y="145" width="362" height="360" rx="20"/>
+  <rect x="458" y="145" width="362" height="14" rx="7" fill="#3060a8"/>
+  <text font-family="Arial" font-size="16" font-weight="700" x="484" y="194" fill="#3060a8">2. FUNCTIONAL UTILITY</text>
+  <text class="head ink" font-family="Arial" font-size="27" font-weight="700" x="484" y="236">Does it predict vision</text>
+  <text class="head ink" font-family="Arial" font-size="27" font-weight="700" x="484" y="270">more accurately?</text>
+  <text class="small muted" font-family="Arial" font-size="19" font-weight="500" x="484" y="319">Same-visit, eye-linked AR test</text>
+  <text class="small muted" font-family="Arial" font-size="19" font-weight="500" x="484" y="350">Same sectors and covariates</text>
+  <line x1="484" y1="375" x2="792" y2="375" stroke="#d5e1e9" stroke-width="2"/>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="484" y="414">Held-out contrast-threshold error</text>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="484" y="446">Paired participant-level comparison</text>
+
+  <path d="M828 322 H847" stroke="#8098aa" stroke-width="4" fill="none"/>
+  <path d="M847 314 L859 322 L847 330 Z" fill="#8098aa"/>
+
+  <rect class="card" x="868" y="145" width="362" height="360" rx="20"/>
+  <rect x="868" y="145" width="362" height="14" rx="7" fill="#ac6c1a"/>
+  <text font-family="Arial" font-size="16" font-weight="700" x="894" y="194" fill="#ac6c1a">3. CLINICAL VALIDATION</text>
+  <text class="head ink" font-family="Arial" font-size="27" font-weight="700" x="894" y="236">Can it help assess</text>
+  <text class="head ink" font-family="Arial" font-size="27" font-weight="700" x="894" y="270">ON or future MS?</text>
+  <text class="small muted" font-family="Arial" font-size="19" font-weight="500" x="894" y="319">Separate patient cohort</text>
+  <text class="small muted" font-family="Arial" font-size="19" font-weight="500" x="894" y="350">Diagnosis · timing · follow-up</text>
+  <line x1="894" y1="375" x2="1202" y2="375" stroke="#d5e1e9" stroke-width="2"/>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="894" y="414">Compare with clinical predictors</text>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="894" y="446">Validate and calibrate risk</text>
+
+  <rect x="48" y="532" width="1182" height="52" rx="12" fill="#e7eef3"/>
+  <text class="small ink" font-family="Arial" font-size="19" font-weight="500" x="70" y="565">Current evidence: paper supports a modest RNFL–contrast link; imaging benchmark is preliminary; clinical risk is untested.</text>
+</svg>
