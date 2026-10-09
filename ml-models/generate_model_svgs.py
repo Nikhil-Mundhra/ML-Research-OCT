@@ -15,6 +15,7 @@ Features:
 import os
 import subprocess
 import xml.etree.ElementTree as ET
+import fitz
 from PIL import Image
 
 SVG_DIR = "/Users/nikhilmundhra/Documents/Github/Capstone/ML-Research-OCT/ml-models/svg"
@@ -543,41 +544,35 @@ def generate_single_planar_svg():
 
 
 # ==============================================================================
-# Helper to cleanly crop out any letterbox padding from PNGs
+# Vector-to-Raster High-Resolution PNG Generator via PyMuPDF (Zero Letterboxing, Zero Cropping)
 # ==============================================================================
-def render_retina_png_exact(svg_name, orig_w, orig_h, render_size=3200):
+def render_retina_png_exact(svg_name, target_width=3200):
     svg_path = os.path.join(SVG_DIR, f"{svg_name}.svg")
     final_png_path = os.path.join(SVG_DIR, f"{svg_name}.png")
     
-    # 1. Render via qlmanage
-    cmd = ["/usr/bin/qlmanage", "-t", "-s", str(render_size), "-o", SVG_DIR, svg_path]
-    subprocess.run(cmd, capture_output=True, text=True)
-    
-    temp_thumb = os.path.join(SVG_DIR, f"{svg_name}.svg.png")
-    if os.path.exists(temp_thumb):
-        im = Image.open(temp_thumb)
-        S = im.width
-        
-        # Exact mathematical aspect crop
-        target_h = int(round(S * float(orig_h) / float(orig_w)))
-        y_offset = max(0, (S - target_h) // 2)
-        
-        # Crop away the top/bottom letterbox padding
-        cropped = im.crop((0, y_offset, S, y_offset + target_h))
-        cropped.save(final_png_path, "PNG", optimize=True)
-        os.remove(temp_thumb)
-        print(f"Rendered & Cropped Retina PNG ({cropped.size[0]}x{cropped.size[1]}): {final_png_path}")
+    doc = fitz.open(svg_path)
+    page = doc[0]
+    rect = page.rect
+    scale = float(target_width) / float(rect.width)
+    mat = fitz.Matrix(scale, scale)
+    pix = page.get_pixmap(matrix=mat)
+    pix.save(final_png_path)
+    print(f"Rendered Crisp Retina PNG ({pix.width}x{pix.height}): {final_png_path}")
 
 if __name__ == "__main__":
     generate_master_taxonomy()
     generate_single_planar_svg()
     
-    # Render PNGs with exact aspect ratio cropping (0 white space!)
-    render_retina_png_exact("master_frontier_taxonomy", 2000, 1340, 3200)
-    render_retina_png_exact("01_single_planar_1.6m", 1520, 920, 3200)
-    render_retina_png_exact("02_biplanar_orthogonal_fusion", 1440, 920, 3200)
-    render_retina_png_exact("03_dense_3d_anisotropic_unet", 1380, 900, 3200)
-    render_retina_png_exact("04_anisotropic_transunet", 1440, 920, 3200)
-    render_retina_png_exact("05_canonical_stn_network", 1440, 920, 3200)
-    render_retina_png_exact("06_multi_task_boundary_heads", 1440, 920, 3200)
-    print("All SVGs and cropped Retina PNGs ready!")
+    # Render PNGs at 3200px Retina resolution directly from vector specifications
+    model_svgs = [
+        "master_frontier_taxonomy",
+        "01_single_planar_1.6m",
+        "02_biplanar_orthogonal_fusion",
+        "03_dense_3d_anisotropic_unet",
+        "04_anisotropic_transunet",
+        "05_canonical_stn_network",
+        "06_multi_task_boundary_heads",
+    ]
+    for m in model_svgs:
+        render_retina_png_exact(m, target_width=3200)
+    print("All SVGs and Retina PNGs ready!")
