@@ -1,9 +1,9 @@
 # Model 5: Canonical Spatial Transformer Residual U-Net (~6.61M Parameters)
 
 **Implementation:**
-- STN Canonicalizer: [`train-cnn-models/model_training/train_rnfl_volumetric/canonicalizer.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/canonicalizer.py)
-- Model Architecture: [`CanonicalVolumetricRNFLNet` in `model.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/model.py#L148-L216)
-- SLURM Training Script: [`train_rnfl_canonical_robust_jubail.slurm`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/train_rnfl_canonical_robust_jubail.slurm)
+- STN Canonicalizer: [`train-cnn-models/model_training/train_rnfl_volumetric/canonicalizer.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/canonicalizer.py)
+- Model Architecture: [`CanonicalVolumetricRNFLNet` in `model.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/model.py#L148-L216)
+- SLURM Training Script: [`train_rnfl_canonical_robust_jubail.slurm`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/train_rnfl_canonical_robust_jubail.slurm)
 - Historical Evaluation Checkpoint: Job `18697275` (Canonical Robust STN)
 
 **Architectural Paradigm:** Differentiable Constrained Spatial Transformer Network (STN) + Volumetric Residual Backbone + Closed-Loop Native Coordinate Inversion  
@@ -17,7 +17,7 @@
 
 ## 1. Architectural Blueprint & STN Closed-Loop Pipeline
 
-![Canonical STN Spatial Transformer Architecture](svg/05_canonical_stn_network.svg)
+[![Canonical STN Spatial Transformer Architecture](./svg/05_canonical_stn_network.png)](./svg/05_canonical_stn_network.svg)
 
 ---
 
@@ -80,7 +80,7 @@ The composite loss function is evaluated **directly on $\hat{\mathbf{L}}_{\text{
 
 ## 5. Controlled Rotation Stress-Testing Benchmark
 
-To quantify tilt resilience, the team executed synthetic rotation stress benchmarks ([`run_orientation_ablation.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/run_orientation_ablation.py)):
+To quantify tilt resilience, the team executed synthetic rotation stress benchmarks ([`run_orientation_ablation.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/run_orientation_ablation.py)):
 
 | Synthetic Head Tilt Angle ($\theta$) | Standard Bi-Planar 2.5D (6.58M) MABE | Canonical STN Model (~6.61M) MABE |
 | :---: | :---: | :---: |

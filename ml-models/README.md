@@ -1,15 +1,15 @@
 # Frontier ML Models for Volumetric RNFL OCT Segmentation
 
 **Location:** `ML-Research-OCT/ml-models/`  
-**Related Training Codebase:** [`train-cnn-models/model_training/`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/)  
-**Clinical Application Suite:** [`OCT-Analyser-Capstone/`](file:///Users/nikhilmundhra/Documents/Github/Capstone/OCT-Analyser-Capstone/)  
+**Related Training Codebase:** [`train-cnn-models/model_training/`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/)  
+**Clinical Application Suite:** [`OCT-Analyser-Capstone/`](https://github.com/Nikhil-Mundhra/OCT-Analyser-Capstone/tree/dev/)  
 **Cohort Benchmark Protocol:** Frozen 20-Subject / 40-Scan Held-Out V2 Cohort (`stratified_held_out_v2.json`)
 
 ---
 
 ## 1. Master Architectural Lineage & Benchmark Taxonomy
 
-![Frontier ML Model Taxonomy & Benchmark Matrix](svg/master_frontier_taxonomy.svg)
+[![Frontier ML Model Taxonomy & Benchmark Matrix](./svg/master_frontier_taxonomy.png)](./svg/master_frontier_taxonomy.svg)
 
 ---
 
@@ -88,7 +88,7 @@ Here is the exact accounting of what was missing or required clarification:
 
 ### 1. Canonical Bi-Planar 2.5D with Spatial Transformer (STN) (~6.61M params)
 - **Status:** **Missed.**
-- **Details:** Evaluated in Job `18697275` ([`model.py#L148-L216`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/model.py#L148-L216)).
+- **Details:** Evaluated in Job `18697275` ([`model.py#L148-L216`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/model.py#L148-L216)).
 - **Why it matters:** In real-world clinics, patients tilt their heads. The canonical STN model incorporates a differentiable localization network that detects tilt and warps scans to a horizontal baseline prior to segmentation, ensuring clinical tilt immunity.
 
 ### 2. Single-Planar Heavy (32 Channel, ~6.58M params)

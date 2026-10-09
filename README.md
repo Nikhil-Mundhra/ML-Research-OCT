@@ -11,6 +11,7 @@ We are asking whether a better algorithm for tracing the retinal nerve fiber lay
 | Document | What it answers |
 | --- | --- |
 | [Research question and abstract](RESEARCH_BRIEF.md) | What is the paper claiming and how can we describe it now? |
+| [Frontier ML Models & Taxonomy](ml-models/README.md) | Architectural diagrams, 3D tensor specifications, and held-out cohort benchmark matrix for all frontier models |
 | [Study protocol](STUDY_PROTOCOL.md) | Which data, methods, endpoints, splits, and statistical comparisons are required? |
 | [Reading notes on the attached AR paper](PAPER_NOTES.md) | What does that paper actually show, and what does it leave open? |
 

@@ -1,6 +1,6 @@
 # Model 4: Hybrid Anisotropic TransUNet (~5.1M - 5.5M Parameters)
 
-**Implementation:** [`train-cnn-models/model_training/train_rnfl_volumetric/transunet.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/transunet.py)  
+**Implementation:** [`train-cnn-models/model_training/train_rnfl_volumetric/transunet.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/transunet.py)  
 **Historical Evaluation Checkpoint:** Job `18710145` (TransUNet Hybrid V100)  
 **Architectural Paradigm:** Hybrid CNN Feature Stem + Vision Transformer (ViT) Bottleneck + Cascaded Upsampler (CUP) + Multi-Scale Stem Boundary Injection  
 **Parameter Count:** **5,099,956 parameters (~5.10M)** *(up to ~5.5M depending on channel width)*
@@ -9,7 +9,7 @@
 
 ## 1. Architectural Blueprint & Hybrid Dataflow
 
-![Hybrid Anisotropic TransUNet Architecture](svg/04_anisotropic_transunet.svg)
+[![Hybrid Anisotropic TransUNet Architecture](./svg/04_anisotropic_transunet.png)](./svg/04_anisotropic_transunet.svg)
 
 ---
 
@@ -20,7 +20,7 @@ Standard medical Vision Transformers (like standard TransUNet for abdominal CT) 
 To preserve sub-millimeter tissue gradients, `TransUNetRNFLNet` incorporates four bespoke innovations:
 
 ### 1. Anisotropic Axial-Preserving Tokenization
-Downsampling is decoupled between the lateral fast axis and axial depth ([`transunet.py#L143-L165`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/transunet.py#L143-L165)):
+Downsampling is decoupled between the lateral fast axis and axial depth ([`transunet.py#L143-L165`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/transunet.py#L143-L165)):
 - **Stage 1 (Stem $f_1$):** Dual Conv-BN-ReLU $\rightarrow (B, 32, 768, 320)$. Retained as high-res bypass.
 - **Stage 2 ($p_2$):** MaxPool $(2, 2) \rightarrow (B, 64, 192, 80)$.
 - **Stage 3 ($p_3$ - Lateral Pool Only):** MaxPool `(1, 2)` $\rightarrow (B, 128, 192, 40)$.  
@@ -44,7 +44,7 @@ Upsampling coarse transformer tokens back to $768 \times 320$ uses dynamic bilin
 - $\text{CUP}_4$: $(384, 160) \rightarrow (768, 320)$ with stem skip $f_1$ ($32$ ch).
 
 ### 4. Multi-Scale Boundary Injection
-To prevent transformer token interpolation from blurring boundary edges, the **`MultiScaleBoundaryHead`** ([`transunet.py#L70-L119`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/transunet.py#L70-L119)) taps both:
+To prevent transformer token interpolation from blurring boundary edges, the **`MultiScaleBoundaryHead`** ([`transunet.py#L70-L119`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/transunet.py#L70-L119)) taps both:
 1. Coarse decoder features (global contextual positioning).
 2. **High-resolution CNN stem features ($f_1$ at full $768 \times 320$ resolution)** containing sharp physical edge reflections.
 

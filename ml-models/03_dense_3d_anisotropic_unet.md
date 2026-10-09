@@ -1,6 +1,6 @@
 # Model 3: Dense Anisotropic 3D U-Net (20.9M Parameters)
 
-**Implementation:** [`train-cnn-models/model_training/train_rnfl_3d/model_3d.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_3d/model_3d.py)  
+**Implementation:** [`train-cnn-models/model_training/train_rnfl_3d/model_3d.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_3d/model_3d.py)  
 **Historical Evaluation Checkpoint:** Job `18574378`  
 **Architectural Paradigm:** Fully 3D Convolutional Network, Anisotropic Patch-Based Slicing, GroupNorm + SiLU Activations  
 **Parameter Count:** **20,903,329 parameters (~20.9M)** *(colloquially referred to as "Dense 3D nnU-Net 25M ish")*
@@ -9,7 +9,7 @@
 
 ## 1. Architectural Blueprint & 3D Tensor Dataflow
 
-![Dense Anisotropic 3D U-Net Architecture](svg/03_dense_3d_anisotropic_unet.svg)
+[![Dense Anisotropic 3D U-Net Architecture](./svg/03_dense_3d_anisotropic_unet.png)](./svg/03_dense_3d_anisotropic_unet.svg)
 
 ---
 
@@ -17,7 +17,7 @@
 
 In project discussions, this model is frequently referred to as **"Dense 3D nnU-Net 25M"**. Technically, it is **not an off-the-shelf nnU-Net framework execution** (which uses automatic heuristic hyperparameter generation and deep supervision).
 
-Instead, it is a **custom-engineered Dense Anisotropic 3D U-Net** (`AnisotropicRNFLUNet3D` in [`model_3d.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_3d/model_3d.py#L63-L99)), designed specifically for the extreme voxel anisotropy of the Optovue Solix scanner:
+Instead, it is a **custom-engineered Dense Anisotropic 3D U-Net** (`AnisotropicRNFLUNet3D` in [`model_3d.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_3d/model_3d.py#L63-L99)), designed specifically for the extreme voxel anisotropy of the Optovue Solix scanner:
 - **True 3D Convolutions:** Kernels are $3 \times 3 \times 3$, maintaining continuous spatial receptive fields across slow ($Z$), axial ($Y$), and lateral ($X$) dimensions simultaneously.
 - **Group Normalization:** Replaces BatchNorm with GroupNorm (`num_groups = min(8, out_channels)`), enabling stable gradient statistics even with micro-batch sizes ($B=1$ or $2$ per GPU) under high 3D VRAM demands.
 - **SiLU (Swish) Activations:** Replaces standard ReLU to maintain non-zero gradients for small negative pre-activations, preserving subtle contrast variations in hyporeflective layers.
@@ -36,7 +36,7 @@ $$\Delta z : \Delta y : \Delta x \approx 10.3 : 1.0 : 4.8$$
 Pooling along $Z$ immediately merges distinct anatomical scans separated by $40\,\mu\text{m}$, while pooling along $Y$ destroys the $3.9\,\mu\text{m}$ boundaries of thin retinal layers.
 
 ### The Decoupled Anisotropic Downsampling Strategy
-To solve this, `AnisotropicRNFLUNet3D` uses **non-isotropic downsampling strides** across its encoder stages ([`model_3d.py#L17-L23`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_3d/model_3d.py#L17-L23)):
+To solve this, `AnisotropicRNFLUNet3D` uses **non-isotropic downsampling strides** across its encoder stages ([`model_3d.py#L17-L23`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_3d/model_3d.py#L17-L23)):
 
 ```
 Input 3D Patch: (B, 1, 64, 768, 64)  [Slow Z, Axial Y, Fast X]

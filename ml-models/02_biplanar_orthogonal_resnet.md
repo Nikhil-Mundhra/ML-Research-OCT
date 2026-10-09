@@ -1,9 +1,9 @@
 # Model 2: Bi-Planar Orthogonal Residual U-Net (16-CH 1.67M & 32-CH 6.58M)
 
 **Implementations:**
-- Model Architecture: [`train-cnn-models/model_training/train_rnfl_volumetric/model.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/model.py#L71-L146)
-- Bi-Planar Consensus Pipeline: [`train-cnn-models/model_training/train_rnfl_volumetric/batch_cohort_evaluator.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/batch_cohort_evaluator.py#L420-L510)
-- Training Scripts: [`train_rnfl_biplanar_jubail.slurm`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/train_rnfl_biplanar_jubail.slurm), [`train_rnfl_biplanar_61subj_4xv100_jubail.slurm`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/train_rnfl_biplanar_61subj_4xv100_jubail.slurm)
+- Model Architecture: [`train-cnn-models/model_training/train_rnfl_volumetric/model.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/model.py#L71-L146)
+- Bi-Planar Consensus Pipeline: [`train-cnn-models/model_training/train_rnfl_volumetric/batch_cohort_evaluator.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/batch_cohort_evaluator.py#L420-L510)
+- Training Scripts: [`train_rnfl_biplanar_jubail.slurm`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/train_rnfl_biplanar_jubail.slurm), [`train_rnfl_biplanar_61subj_4xv100_jubail.slurm`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/train_rnfl_biplanar_61subj_4xv100_jubail.slurm)
 
 **Benchmark Checkpoints:**
 - 16-Channel (1.67M params): Job `18223981` (23-Subj Bi-Planar)
@@ -13,7 +13,7 @@
 
 ## 1. Architectural Blueprint & Bi-Planar Pipeline
 
-![Bi-Planar Orthogonal Residual U-Net Architecture](svg/02_biplanar_orthogonal_fusion.svg)
+[![Bi-Planar Orthogonal Residual U-Net Architecture](./svg/02_biplanar_orthogonal_fusion.png)](./svg/02_biplanar_orthogonal_fusion.svg)
 
 ---
 
@@ -78,7 +78,7 @@ The volumetric residual backbone (`VolumetricRNFLNet`) supports scalable base ch
 
 ## 4. Post-Processing: Surface Clamping & Optic Cup-Reach Tracking
 
-The raw consensus volume passes through two clinical post-processing filters ([`batch_cohort_evaluator.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/batch_cohort_evaluator.py#L480-L530)):
+The raw consensus volume passes through two clinical post-processing filters ([`batch_cohort_evaluator.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/batch_cohort_evaluator.py#L480-L530)):
 
 ### 1. Surface-Guided RPE False-Positive Clamping
 Commercial Solix scans often contain hyper-reflective artifacts below the Retinal Pigment Epithelium (RPE) or in the choroid that cause false-positive segmented islands. Our pipeline tracks the RPE boundary and applies a strict clamp:

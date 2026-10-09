@@ -1,15 +1,15 @@
 # Multi-Task Continuous Boundary Heads & Loss Engine
 
 **Implementations:**
-- Multi-Task Head Architecture: [`BoundaryRegressionHead` in `model.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/model.py#L28-L69)
-- Multi-Scale Boundary Head: [`MultiScaleBoundaryHead` in `transunet.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/transunet.py#L70-L119)
-- Loss Functions & Sobolev Gradients: [`train-cnn-models/model_training/train_rnfl_volumetric/losses.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/losses.py)
+- Multi-Task Head Architecture: [`BoundaryRegressionHead` in `model.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/model.py#L28-L69)
+- Multi-Scale Boundary Head: [`MultiScaleBoundaryHead` in `transunet.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/transunet.py#L70-L119)
+- Loss Functions & Sobolev Gradients: [`train-cnn-models/model_training/train_rnfl_volumetric/losses.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/losses.py)
 
 ---
 
 ## 1. Architectural Blueprint & Loss Formulation
 
-![Multi-Task Continuous Boundary Heads and Loss Engine](svg/06_multi_task_boundary_heads.svg)
+[![Multi-Task Continuous Boundary Heads and Loss Engine](./svg/06_multi_task_boundary_heads.png)](./svg/06_multi_task_boundary_heads.svg)
 
 ---
 
@@ -54,7 +54,7 @@ Standard Dice and BCE losses treat all voxels equally, ignoring optical physics.
 - **ILM Boundary:** Step change from non-reflective vitreous humor to hyper-reflective nerve fiber axons.
 - **RPE Boundary:** Intense optical backscatter from melanin-rich retinal pigment epithelium.
 
-To lock predicted boundaries to physical optical transitions, we formulate the **Sobel Optical Edge Loss** ([`losses.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/losses.py)):
+To lock predicted boundaries to physical optical transitions, we formulate the **Sobel Optical Edge Loss** ([`losses.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/losses.py)):
 $$\mathbf{K}_y = \frac{1}{8}\begin{bmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ 1 & 2 & 1 \end{bmatrix}$$
 $$\nabla_y I_{\text{OCT}} = \mathbf{K}_y * I_{\text{OCT}}, \quad \nabla_y \hat{\mathbf{P}} = \mathbf{K}_y * \sigma(\text{mask\_logits})$$
 $$\mathcal{L}_{\text{edge}} = - \frac{1}{|\Omega|} \sum_{(y, x) \in \Omega} |\nabla_y I_{\text{OCT}}(y, x)| \cdot |\nabla_y \hat{\mathbf{P}}(y, x)|$$

@@ -1,6 +1,6 @@
 # Model 1: Single-Planar 2.5D Residual U-Net (1.67M Parameters)
 
-**Implementation:** [`train-cnn-models/model_training/train_rnfl_volumetric/model.py`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/model.py#L71-L146)  
+**Implementation:** [`train-cnn-models/model_training/train_rnfl_volumetric/model.py`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/model.py#L71-L146)  
 **Historical Evaluation Checkpoint:** Job `18043443` (Light Volumetric Baseline)  
 **Architectural Paradigm:** 2.5D Multi-Slice Input, 2D Residual U-Net Backbone, Continuous 1D Boundary Regression Heads  
 **Parameter Count:** **1,672,021 parameters (~1.67M)**
@@ -9,7 +9,7 @@
 
 ## 1. Architectural Blueprint & Tensor Dataflow
 
-![Single-Planar 2.5D Residual U-Net Architecture](svg/01_single_planar_1.6m.svg)
+[![Single-Planar 2.5D Residual U-Net Architecture](./svg/01_single_planar_1.6m.png)](./svg/01_single_planar_1.6m.svg)
 
 ### 1.1 Input Geometry & 2.5D Context Window
 Unlike conventional 2D slice-by-slice networks that process isolated B-scans with zero out-of-plane awareness, the **Single-Planar 2.5D Residual U-Net** feeds a continuous 5-slice slab centered around target slice $z$:
@@ -53,7 +53,7 @@ A standard binary segmentation head outputs voxel probabilities $\mathbf{P} \in 
 $$\hat{y}_{\text{boundary}}(x) = \arg\max_y P(y, x)$$
 This introduces an **irreducible integer discretization error** of at least $\pm 1\,\text{px} \approx \pm 3.9\,\mu\text{m}$, creating jagged stepping artifacts.
 
-To solve this, the Single-Planar architecture introduces the **`BoundaryRegressionHead`** ([`model.py#L28-L69`](file:///Users/nikhilmundhra/Documents/Github/Capstone/train-cnn-models/model_training/train_rnfl_volumetric/model.py#L28-L69)):
+To solve this, the Single-Planar architecture introduces the **`BoundaryRegressionHead`** ([`model.py#L28-L69`](https://github.com/Nikhil-Mundhra/train-cnn-models/tree/main/model_training/train_rnfl_volumetric/model.py#L28-L69)):
 
 ```
 Decoder Features (B, 16, 768, 320)
