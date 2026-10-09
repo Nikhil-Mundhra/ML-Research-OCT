@@ -1,0 +1,333 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" width="100%" height="100%">
+  
+  <defs>
+    <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="grad-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </linearGradient>
+    <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="grad-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2dd4bf" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#c084fc" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#fbbf24" />
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#fb7185" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="960" fill="url(#grad-bg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.06">
+    <path d="M 0 0 L 0 960 M 40 0 L 40 960 M 80 0 L 80 960 M 120 0 L 120 960 M 160 0 L 160 960 M 200 0 L 200 960 M 240 0 L 240 960 M 280 0 L 280 960 M 320 0 L 320 960 M 360 0 L 360 960 M 400 0 L 400 960 M 440 0 L 440 960 M 480 0 L 480 960 M 520 0 L 520 960 M 560 0 L 560 960 M 600 0 L 600 960 M 640 0 L 640 960 M 680 0 L 680 960 M 720 0 L 720 960 M 760 0 L 760 960 M 800 0 L 800 960 M 840 0 L 840 960 M 880 0 L 880 960 M 920 0 L 920 960 M 960 0 L 960 960 M 1000 0 L 1000 960 M 1040 0 L 1040 960 M 1080 0 L 1080 960 M 1120 0 L 1120 960 M 1160 0 L 1160 960 M 1200 0 L 1200 960 M 1240 0 L 1240 960 M 1280 0 L 1280 960 M 1320 0 L 1320 960 M 1360 0 L 1360 960 M 1400 0 L 1400 960" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M 0 0 L 1440 0 M 0 40 L 1440 40 M 0 80 L 1440 80 M 0 120 L 1440 120 M 0 160 L 1440 160 M 0 200 L 1440 200 M 0 240 L 1440 240 M 0 280 L 1440 280 M 0 320 L 1440 320 M 0 360 L 1440 360 M 0 400 L 1440 400 M 0 440 L 1440 440 M 0 480 L 1440 480 M 0 520 L 1440 520 M 0 560 L 1440 560 M 0 600 L 1440 600 M 0 640 L 1440 640 M 0 680 L 1440 680 M 0 720 L 1440 720 M 0 760 L 1440 760 M 0 800 L 1440 800 M 0 840 L 1440 840 M 0 880 L 1440 880 M 0 920 L 1440 920" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+
+  <!-- Header Banner -->
+  <g transform="translate(60, 45)">
+    <rect x="0" y="0" width="1320" height="95" rx="14" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="8" height="95" rx="4" fill="url(#grad-teal)"/>
+    <text x="32" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">FRONTIER ML MODEL TAXONOMY &amp; BENCHMARK MATRIX</text>
+    <text x="32" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#94a3b8">Comprehensive Architectural Lineage for Optovue Solix Peripapillary RNFL Volumetric OCT Segmentation</text>
+    <rect x="1100" y="28" width="185" height="38" rx="8" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.2"/>
+    <text x="1192" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle">HELD-OUT 40-EYE V2 SPLIT</text>
+  </g>
+
+  <!-- 5 Architecture Column Cards -->
+  <!-- Model 1: Single-Planar 1.6M -->
+  <g transform="translate(60, 165)">
+    <rect width="248" height="490" rx="12" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="248" height="6" rx="3" fill="url(#grad-blue)"/>
+    
+    <text x="18" y="34" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="1">ABLATION BASELINE</text>
+    <text x="18" y="58" font-family="sans-serif" font-size="17" font-weight="800" fill="#f8fafc">Single-Planar 1.6M</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="12" font-weight="600" fill="#64748b">Job: 18043443 (Light)</text>
+
+    <!-- Specs Box -->
+    <rect x="14" y="94" width="220" height="150" rx="8" fill="#0b1120" stroke="#1e293b"/>
+    <text x="24" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Params: <tspan fill="#f1f5f9" font-weight="700">1,672,021 (~1.67M)</tspan></text>
+    <text x="24" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Base Channels: <tspan fill="#f1f5f9" font-weight="700">16 ch</tspan></text>
+    <text x="24" y="156" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Receptive Context: <tspan fill="#f1f5f9" font-weight="700">2.5D (5 slices)</tspan></text>
+    <text x="24" y="176" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Inference Axis: <tspan fill="#f1f5f9" font-weight="700">Horizontal (X-Z) Only</tspan></text>
+    <text x="24" y="196" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Heads: <tspan fill="#f1f5f9" font-weight="700">Dense + 1D Boundary</tspan></text>
+    <text x="24" y="216" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Tilt Invariance: <tspan fill="#f43f5e" font-weight="700">None (Native)</tspan></text>
+    <text x="24" y="234" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Orthogonal Fusion: <tspan fill="#64748b" font-weight="700">No</tspan></text>
+
+    <!-- Key Metrics -->
+    <rect x="14" y="256" width="220" height="155" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8">Held-Out V2 Metrics</text>
+    <text x="24" y="300" font-family="sans-serif" font-size="11" fill="#94a3b8">Median Dice: <tspan fill="#f8fafc" font-weight="700">0.8055</tspan></text>
+    <text x="24" y="322" font-family="sans-serif" font-size="11" fill="#94a3b8">Median MABE: <tspan fill="#f8fafc" font-weight="700">12.58 µm</tspan></text>
+    <text x="24" y="344" font-family="sans-serif" font-size="11" fill="#94a3b8">Mean MABE: <tspan fill="#f8fafc" font-weight="700">20.18 ± 19.5 µm</tspan></text>
+    <text x="24" y="366" font-family="sans-serif" font-size="11" fill="#94a3b8">Median P95: <tspan fill="#f8fafc" font-weight="700">32.96 µm</tspan></text>
+    <text x="24" y="388" font-family="sans-serif" font-size="11" fill="#94a3b8">Cup IoU: <tspan fill="#f8fafc" font-weight="700">0.8422</tspan></text>
+
+    <!-- Verdict Badge -->
+    <rect x="14" y="424" width="220" height="52" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-dasharray="3 3"/>
+    <text x="24" y="444" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8">ROLE: Early Feasibility</text>
+    <text x="24" y="462" font-family="sans-serif" font-size="10" fill="#94a3b8">Suffers high inter-B-scan jitter.</text>
+  </g>
+
+  <!-- Model 2: Bi-Planar 1.6M & 6.5M -->
+  <g transform="translate(328, 165)">
+    <rect width="256" height="490" rx="12" fill="url(#grad-card)" stroke="#0d9488" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="256" height="6" rx="3" fill="url(#grad-teal)"/>
+    
+    <rect x="135" y="16" width="105" height="20" rx="4" fill="#042f2e" stroke="#14b8a6"/>
+    <text x="187" y="30" font-family="sans-serif" font-size="9" font-weight="800" fill="#2dd4bf" text-anchor="middle">LEAD CANDIDATE</text>
+
+    <text x="18" y="34" font-family="sans-serif" font-size="12" font-weight="700" fill="#2dd4bf" letter-spacing="1">ORTHOGONAL FUSION</text>
+    <text x="18" y="58" font-family="sans-serif" font-size="17" font-weight="800" fill="#f8fafc">Bi-Planar 1.6M / 6.5M</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="12" font-weight="600" fill="#64748b">Jobs: 18223981 (16ch) / 18563914 (32ch)</text>
+
+    <!-- Specs Box -->
+    <rect x="14" y="94" width="228" height="150" rx="8" fill="#0b1120" stroke="#134e4a"/>
+    <text x="24" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Params: <tspan fill="#f1f5f9" font-weight="700">1.67M (16ch) | 6.58M (32ch)</tspan></text>
+    <text x="24" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Base Channels: <tspan fill="#f1f5f9" font-weight="700">16 ch or 32 ch</tspan></text>
+    <text x="24" y="156" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Receptive Context: <tspan fill="#2dd4bf" font-weight="700">Bi-Planar Dual 2.5D</tspan></text>
+    <text x="24" y="176" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Inference Axis: <tspan fill="#2dd4bf" font-weight="700">Orthogonal (X-Z &amp; Y-Z)</tspan></text>
+    <text x="24" y="196" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Heads: <tspan fill="#f1f5f9" font-weight="700">Dense + 1D ILM/NFL/Cup</tspan></text>
+    <text x="24" y="216" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Fusion Mechanism: <tspan fill="#2dd4bf" font-weight="700">3D Consensus Average</tspan></text>
+    <text x="24" y="234" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Surface Clamping: <tspan fill="#34d399" font-weight="700">Guided + Cup-Reach</tspan></text>
+
+    <!-- Key Metrics -->
+    <rect x="14" y="256" width="228" height="155" rx="8" fill="#042f2e" stroke="#0d9488"/>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" font-weight="700" fill="#2dd4bf">Held-Out V2 Metrics (32ch)</text>
+    <text x="24" y="300" font-family="sans-serif" font-size="11" fill="#94a3b8">Median Dice: <tspan fill="#34d399" font-weight="800">0.9518 (BEST)</tspan></text>
+    <text x="24" y="322" font-family="sans-serif" font-size="11" fill="#94a3b8">Median MABE: <tspan fill="#34d399" font-weight="800">4.71 µm (BEST)</tspan></text>
+    <text x="24" y="344" font-family="sans-serif" font-size="11" fill="#94a3b8">Mean MABE: <tspan fill="#f8fafc" font-weight="700">6.22 ± 5.91 µm</tspan></text>
+    <text x="24" y="366" font-family="sans-serif" font-size="11" fill="#94a3b8">Median P95: <tspan fill="#34d399" font-weight="800">16.85 µm (BEST)</tspan></text>
+    <text x="24" y="388" font-family="sans-serif" font-size="11" fill="#94a3b8">Cup IoU: <tspan fill="#34d399" font-weight="800">0.9388 (BEST)</tspan></text>
+
+    <!-- Verdict Badge -->
+    <rect x="14" y="424" width="228" height="52" rx="6" fill="#0f2926" stroke="#2dd4bf"/>
+    <text x="24" y="444" font-family="sans-serif" font-size="11" font-weight="700" fill="#2dd4bf">ROLE: Lead Research Model</text>
+    <text x="24" y="462" font-family="sans-serif" font-size="10" fill="#94a3b8">Top precision; 1 held-out outlier.</text>
+  </g>
+
+  <!-- Model 3: Canonical STN Bi-Planar ~6.61M -->
+  <g transform="translate(604, 165)">
+    <rect width="256" height="490" rx="12" fill="url(#grad-card)" stroke="#1e293b" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="256" height="6" rx="3" fill="url(#grad-amber)"/>
+    
+    <rect x="135" y="16" width="105" height="20" rx="4" fill="#451a03" stroke="#d97706"/>
+    <text x="187" y="30" font-family="sans-serif" font-size="9" font-weight="800" fill="#fbbf24" text-anchor="middle">STN CANONICAL</text>
+
+    <text x="18" y="34" font-family="sans-serif" font-size="12" font-weight="700" fill="#fbbf24" letter-spacing="1">TILT-INVARIANT STN</text>
+    <text x="18" y="58" font-family="sans-serif" font-size="17" font-weight="800" fill="#f8fafc">Canonical STN 6.6M</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="12" font-weight="600" fill="#64748b">Job: 18697275 (STN-Net)</text>
+
+    <!-- Specs Box -->
+    <rect x="14" y="94" width="228" height="150" rx="8" fill="#0b1120" stroke="#1e293b"/>
+    <text x="24" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Params: <tspan fill="#f1f5f9" font-weight="700">6,608,983 (~6.61M)</tspan></text>
+    <text x="24" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Base Channels: <tspan fill="#f1f5f9" font-weight="700">32 ch + STN Head</tspan></text>
+    <text x="24" y="156" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">STN Mechanism: <tspan fill="#fbbf24" font-weight="700">Differentiable Affine</tspan></text>
+    <text x="24" y="176" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Tilt Angle Bounds: <tspan fill="#fbbf24" font-weight="700">θ ∈ [-25°, +25°]</tspan></text>
+    <text x="24" y="196" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Axial Shift Bounds: <tspan fill="#fbbf24" font-weight="700">t_y ∈ [-20%, +20%]</tspan></text>
+    <text x="24" y="216" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Backbone: <tspan fill="#f1f5f9" font-weight="700">Canonical 2.5D Residual</tspan></text>
+    <text x="24" y="234" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Inverse Warp: <tspan fill="#34d399" font-weight="700">Yes (Back to Native)</tspan></text>
+
+    <!-- Key Metrics -->
+    <rect x="14" y="256" width="228" height="155" rx="8" fill="#0f172a" stroke="#334155"/>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" font-weight="700" fill="#fbbf24">Stress Test / Tilt Robustness</text>
+    <text x="24" y="300" font-family="sans-serif" font-size="11" fill="#94a3b8">Canonical Dice: <tspan fill="#f8fafc" font-weight="700">0.9412</tspan></text>
+    <text x="24" y="322" font-family="sans-serif" font-size="11" fill="#94a3b8">Mean MABE: <tspan fill="#f8fafc" font-weight="700">6.45 ± 4.12 µm</tspan></text>
+    <text x="24" y="344" font-family="sans-serif" font-size="11" fill="#94a3b8">Tilt Stress (±15°): <tspan fill="#34d399" font-weight="700">&lt; 0.8 µm drift</tspan></text>
+    <text x="24" y="366" font-family="sans-serif" font-size="11" fill="#94a3b8">Baseline Drift (±15°): <tspan fill="#f43f5e" font-weight="700">&gt; 14.2 µm drift</tspan></text>
+    <text x="24" y="388" font-family="sans-serif" font-size="11" fill="#94a3b8">Cup IoU: <tspan fill="#f8fafc" font-weight="700">0.9315</tspan></text>
+
+    <!-- Verdict Badge -->
+    <rect x="14" y="424" width="228" height="52" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-dasharray="3 3"/>
+    <text x="24" y="444" font-family="sans-serif" font-size="11" font-weight="700" fill="#fbbf24">ROLE: Clinical Tilt Resilience</text>
+    <text x="24" y="462" font-family="sans-serif" font-size="10" fill="#94a3b8">Prevents head tilt scan failure.</text>
+  </g>
+
+  <!-- Model 4: Dense 3D Anisotropic U-Net ~20.9M -->
+  <g transform="translate(880, 165)">
+    <rect width="256" height="490" rx="12" fill="url(#grad-card)" stroke="#4338ca" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="256" height="6" rx="3" fill="url(#grad-indigo)"/>
+    
+    <rect x="135" y="16" width="105" height="20" rx="4" fill="#1e1b4b" stroke="#6366f1"/>
+    <text x="187" y="30" font-family="sans-serif" font-size="9" font-weight="800" fill="#a5b4fc" text-anchor="middle">OUTLIER SHIELD</text>
+
+    <text x="18" y="34" font-family="sans-serif" font-size="12" font-weight="700" fill="#818cf8" letter-spacing="1">VOLUMETRIC 3D</text>
+    <text x="18" y="58" font-family="sans-serif" font-size="17" font-weight="800" fill="#f8fafc">Dense 3D U-Net</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="12" font-weight="600" fill="#64748b">Job: 18574378 (nnU-Net Style)</text>
+
+    <!-- Specs Box -->
+    <rect x="14" y="94" width="228" height="150" rx="8" fill="#0b1120" stroke="#1e1b4b"/>
+    <text x="24" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Params: <tspan fill="#f1f5f9" font-weight="700">20,903,329 (~20.9M)</tspan></text>
+    <text x="24" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Base Channels: <tspan fill="#f1f5f9" font-weight="700">32 ch (up to 384 ch)</tspan></text>
+    <text x="24" y="156" font-family="sans-serif" font-size="11" font-weight="600" fill="#818cf8" font-weight="700">True 3D Convolutions</tspan></text>
+    <text x="24" y="176" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">3D Patch Size: <tspan fill="#818cf8" font-weight="700">(64, 768, 64) voxels</tspan></text>
+    <text x="24" y="196" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Downsampling: <tspan fill="#f1f5f9" font-weight="700">Anisotropic (1,2,1)</tspan></text>
+    <text x="24" y="216" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Normalization: <tspan fill="#f1f5f9" font-weight="700">GroupNorm + SiLU</tspan></text>
+    <text x="24" y="234" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Surface Regression: <tspan fill="#94a3b8">Dense Mask Only</tspan></text>
+
+    <!-- Key Metrics -->
+    <rect x="14" y="256" width="228" height="155" rx="8" fill="#1e1b4b" stroke="#4338ca"/>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" font-weight="700" fill="#a5b4fc">Held-Out V2 Metrics</text>
+    <text x="24" y="300" font-family="sans-serif" font-size="11" fill="#94a3b8">Median Dice: <tspan fill="#f8fafc" font-weight="700">0.9471</tspan></text>
+    <text x="24" y="322" font-family="sans-serif" font-size="11" fill="#94a3b8">Median MABE: <tspan fill="#f8fafc" font-weight="700">5.50 µm</tspan></text>
+    <text x="24" y="344" font-family="sans-serif" font-size="11" fill="#94a3b8">Mean MABE: <tspan fill="#34d399" font-weight="800">5.87 ± 2.13 µm (BEST)</tspan></text>
+    <text x="24" y="366" font-family="sans-serif" font-size="11" fill="#94a3b8">Max Scan MABE: <tspan fill="#34d399" font-weight="800">17.02 µm (LOWEST)</tspan></text>
+    <text x="24" y="388" font-family="sans-serif" font-size="11" fill="#94a3b8">Cup IoU: <tspan fill="#f8fafc" font-weight="700">0.9085</tspan></text>
+
+    <!-- Verdict Badge -->
+    <rect x="14" y="424" width="228" height="52" rx="6" fill="#17143a" stroke="#818cf8"/>
+    <text x="24" y="444" font-family="sans-serif" font-size="11" font-weight="700" fill="#818cf8">ROLE: Outlier &amp; QC Guardian</text>
+    <text x="24" y="462" font-family="sans-serif" font-size="10" fill="#94a3b8">Zero severe cohort failure cases.</text>
+  </g>
+
+  <!-- Model 5: Anisotropic TransUNet ~5.1M - 5.5M -->
+  <g transform="translate(1156, 165)">
+    <rect width="224" height="490" rx="12" fill="url(#grad-card)" stroke="#6b21a8" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="224" height="6" rx="3" fill="url(#grad-purple)"/>
+    
+    <rect x="105" y="16" width="105" height="20" rx="4" fill="#3b0764" stroke="#a855f7"/>
+    <text x="157" y="30" font-family="sans-serif" font-size="9" font-weight="800" fill="#d8b4fe" text-anchor="middle">EXPERIMENTAL</text>
+
+    <text x="18" y="34" font-family="sans-serif" font-size="12" font-weight="700" fill="#c084fc" letter-spacing="1">CNN + ViT HYBRID</text>
+    <text x="18" y="58" font-family="sans-serif" font-size="17" font-weight="800" fill="#f8fafc">TransUNet 5.1M</text>
+    <text x="18" y="78" font-family="sans-serif" font-size="12" font-weight="600" fill="#64748b">Job: 18710145 (Hybrid)</text>
+
+    <!-- Specs Box -->
+    <rect x="14" y="94" width="196" height="150" rx="8" fill="#0b1120" stroke="#3b0764"/>
+    <text x="24" y="116" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Params: <tspan fill="#f1f5f9" font-weight="700">5,099,956 (~5.1M)</tspan></text>
+    <text x="24" y="136" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">ViT Layers: <tspan fill="#c084fc" font-weight="700">6 Transformer</tspan></text>
+    <text x="24" y="156" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Tokens: <tspan fill="#c084fc" font-weight="700">1,920 (96 × 20)</tspan></text>
+    <text x="24" y="176" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Hidden Dim: <tspan fill="#f1f5f9" font-weight="700">d = 256, 8 heads</tspan></text>
+    <text x="24" y="196" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Decoder: <tspan fill="#f1f5f9" font-weight="700">Cascaded (CUP)</tspan></text>
+    <text x="24" y="216" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Boundary Injection: <tspan fill="#34d399" font-weight="700">Stem Skip f1</tspan></text>
+    <text x="24" y="234" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Inference Axis: <tspan fill="#f1f5f9" font-weight="700">Bi-Planar (H+V)</tspan></text>
+
+    <!-- Key Metrics -->
+    <rect x="14" y="256" width="196" height="155" rx="8" fill="#2e1065" stroke="#7e22ce"/>
+    <text x="24" y="278" font-family="sans-serif" font-size="12" font-weight="700" fill="#d8b4fe">Held-Out V2 Metrics</text>
+    <text x="24" y="300" font-family="sans-serif" font-size="11" fill="#94a3b8">Median Dice: <tspan fill="#f43f5e" font-weight="700">0.6922 (Underperf)</tspan></text>
+    <text x="24" y="322" font-family="sans-serif" font-size="11" fill="#94a3b8">Median MABE: <tspan fill="#f43f5e" font-weight="700">31.90 µm</tspan></text>
+    <text x="24" y="344" font-family="sans-serif" font-size="11" fill="#94a3b8">Mean MABE: <tspan fill="#f8fafc">42.69 ± 33.0 µm</tspan></text>
+    <text x="24" y="366" font-family="sans-serif" font-size="11" fill="#94a3b8">Median P95: <tspan fill="#f8fafc">86.47 µm</tspan></text>
+    <text x="24" y="388" font-family="sans-serif" font-size="11" fill="#94a3b8">Cup IoU: <tspan fill="#f8fafc">0.7282</tspan></text>
+
+    <!-- Verdict Badge -->
+    <rect x="14" y="424" width="196" height="52" rx="6" fill="#1e1b4b" stroke="#a855f7" stroke-dasharray="3 3"/>
+    <text x="24" y="444" font-family="sans-serif" font-size="11" font-weight="700" fill="#c084fc">ROLE: Research Probe</text>
+    <text x="24" y="462" font-family="sans-serif" font-size="10" fill="#94a3b8">Requires ablation on token depth.</text>
+  </g>
+
+  <!-- Bottom Comparison Strip & Key Architectural Takeaways -->
+  <g transform="translate(60, 680)">
+    <rect width="1320" height="235" rx="14" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    
+    <text x="32" y="36" font-family="sans-serif" font-size="17" font-weight="800" fill="#f8fafc">KEY ARCHITECTURAL FINDINGS &amp; MODEL TAXONOMY LESSONS</text>
+    
+    <!-- Lesson 1 -->
+    <g transform="translate(32, 58)">
+      <rect width="395" height="150" rx="8" fill="#0b1120" stroke="#1e293b"/>
+      <circle cx="24" cy="24" r="10" fill="#0d9488"/>
+      <text x="24" y="28" font-family="sans-serif" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">1</text>
+      <text x="44" y="28" font-family="sans-serif" font-size="13" font-weight="700" fill="#2dd4bf">Geometry Trumps Pure Capacity</text>
+      <text x="24" y="54" font-family="sans-serif" font-size="11" fill="#cbd5e1" width="350">
+        <tspan x="24" dy="0">Upgrading 1.6M → 6.5M in single-planar mode only</tspan>
+        <tspan x="24" dy="18">improved Dice from 0.8055 to 0.8562. Introducing</tspan>
+        <tspan x="24" dy="18"><tspan fill="#2dd4bf" font-weight="700">Bi-Planar Orthogonal Consensus Fusion</tspan> jumped Dice</tspan>
+        <tspan x="24" dy="18">to <tspan fill="#34d399" font-weight="700">0.9518</tspan> and slashed median MABE from 12.6 to 4.7 µm.</tspan>
+      </text>
+    </g>
+
+    <!-- Lesson 2 -->
+    <g transform="translate(457, 58)">
+      <rect width="405" height="150" rx="8" fill="#0b1120" stroke="#1e293b"/>
+      <circle cx="24" cy="24" r="10" fill="#4f46e5"/>
+      <text x="24" y="28" font-family="sans-serif" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">2</text>
+      <text x="44" y="28" font-family="sans-serif" font-size="13" font-weight="700" fill="#818cf8">Dense 3D U-Net is an Anisotropic Outlier Shield</text>
+      <text x="24" y="54" font-family="sans-serif" font-size="11" fill="#cbd5e1">
+        <tspan x="24" dy="0">Dense 3D U-Net operates across 3D voxels, eliminating</tspan>
+        <tspan x="24" dy="18">single-slice drift. While Bi-Planar has the lower median</tspan>
+        <tspan x="24" dy="18">error (4.71 vs 5.50 µm), Dense 3D achieves lower mean</tspan>
+        <tspan x="24" dy="18">MABE (5.87 µm) and lowest worst-case scan error (17.02 µm).</tspan>
+      </text>
+    </g>
+
+    <!-- Lesson 3 -->
+    <g transform="translate(892, 58)">
+      <rect width="395" height="150" rx="8" fill="#0b1120" stroke="#1e293b"/>
+      <circle cx="24" cy="24" r="10" fill="#d97706"/>
+      <text x="24" y="28" font-family="sans-serif" font-size="11" font-weight="800" fill="#f8fafc" text-anchor="middle">3</text>
+      <text x="44" y="28" font-family="sans-serif" font-size="13" font-weight="700" fill="#fbbf24">What Was Missed: Canonical STN Model</text>
+      <text x="24" y="54" font-family="sans-serif" font-size="11" fill="#cbd5e1">
+        <tspan x="24" dy="0">Patient head tilt introduces severe diagonal artifacts.</tspan>
+        <tspan x="24" dy="18">The <tspan fill="#fbbf24" font-weight="700">CanonicalVolumetricRNFLNet (~6.61M)</tspan> embeds</tspan>
+        <tspan x="24" dy="18">a Spatial Transformer predicting tilt θ ∈ [-25°, +25°],</tspan>
+        <tspan x="24" dy="18">bounding boundary drift below &lt;0.8 µm under stress tilt.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

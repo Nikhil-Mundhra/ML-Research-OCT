@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 920" width="100%" height="100%">
+  
+  <defs>
+    <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="grad-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </linearGradient>
+    <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="grad-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2dd4bf" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#c084fc" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#fbbf24" />
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#fb7185" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="920" fill="url(#grad-bg)"/>
+  
+  <g opacity="0.05">
+    <path d="M 0 0 L 0 920 M 40 0 L 40 920 M 80 0 L 80 920 M 120 0 L 120 920 M 160 0 L 160 920 M 200 0 L 200 920 M 240 0 L 240 920 M 280 0 L 280 920 M 320 0 L 320 920 M 360 0 L 360 920 M 400 0 L 400 920 M 440 0 L 440 920 M 480 0 L 480 920 M 520 0 L 520 920 M 560 0 L 560 920 M 600 0 L 600 920 M 640 0 L 640 920 M 680 0 L 680 920 M 720 0 L 720 920 M 760 0 L 760 920 M 800 0 L 800 920 M 840 0 L 840 920 M 880 0 L 880 920 M 920 0 L 920 920 M 960 0 L 960 920 M 1000 0 L 1000 920 M 1040 0 L 1040 920 M 1080 0 L 1080 920 M 1120 0 L 1120 920 M 1160 0 L 1160 920 M 1200 0 L 1200 920 M 1240 0 L 1240 920 M 1280 0 L 1280 920 M 1320 0 L 1320 920 M 1360 0 L 1360 920 M 1400 0 L 1400 920" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M 0 0 L 1440 0 M 0 40 L 1440 40 M 0 80 L 1440 80 M 0 120 L 1440 120 M 0 160 L 1440 160 M 0 200 L 1440 200 M 0 240 L 1440 240 M 0 280 L 1440 280 M 0 320 L 1440 320 M 0 360 L 1440 360 M 0 400 L 1440 400 M 0 440 L 1440 440 M 0 480 L 1440 480 M 0 520 L 1440 520 M 0 560 L 1440 560 M 0 600 L 1440 600 M 0 640 L 1440 640 M 0 680 L 1440 680 M 0 720 L 1440 720 M 0 760 L 1440 760 M 0 800 L 1440 800 M 0 840 L 1440 840 M 0 880 L 1440 880" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(60, 40)">
+    <rect width="1320" height="90" rx="12" fill="url(#grad-card)" stroke="#d97706" stroke-width="1.8" filter="url(#shadow)"/>
+    <rect width="8" height="90" rx="4" fill="url(#grad-amber)"/>
+    <text x="32" y="36" font-family="sans-serif" font-size="22" font-weight="800" fill="#f8fafc">MODEL 5: CANONICAL SPATIAL TRANSFORMER RESIDUAL U-NET (~6.61M PARAMETERS)</text>
+    <text x="32" y="64" font-family="sans-serif" font-size="13" font-weight="500" fill="#94a3b8">The Frontier Model You Missed: Differentiable Head-Tilt Canonicalization, Rigid Affine Warping, and Coordinate Inversion</text>
+    <rect x="1080" y="26" width="200" height="38" rx="6" fill="#451a03" stroke="#fbbf24"/>
+    <text x="1180" y="50" font-family="sans-serif" font-size="12" font-weight="800" fill="#fbbf24" text-anchor="middle">6,608,983 PARAMS</text>
+  </g>
+
+  <!-- STN Closed-Loop Flow Pipeline -->
+  <!-- Box 1: Raw Tilted OCT Input -->
+  <g transform="translate(60, 160)">
+    <rect width="260" height="420" rx="12" fill="url(#grad-card)" stroke="#f43f5e" stroke-width="1.8" filter="url(#shadow)"/>
+    <rect width="260" height="6" rx="3" fill="url(#grad-rose)"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="13" font-weight="800" fill="#fb7185">1. RAW TILTED SCAN</text>
+    <text x="24" y="50" font-family="sans-serif" font-size="10" fill="#94a3b8">Patient Head Pitch / Scanner Roll</text>
+
+    <!-- Visual Tilted B-scan -->
+    <g transform="translate(25, 75)">
+      <rect width="210" height="180" rx="6" fill="#0b1120" stroke="#334155"/>
+      <!-- Tilted Layer Contours -->
+      <path d="M 15 130 Q 100 80 195 50" stroke="#f43f5e" stroke-width="3" fill="none"/>
+      <path d="M 15 145 Q 100 95 195 65" stroke="#fb7185" stroke-width="2" fill="none"/>
+      <text x="105" y="165" font-family="sans-serif" font-size="11" font-weight="700" fill="#f43f5e" text-anchor="middle">Severe Scan Tilt (θ ≈ 15°)</text>
+    </g>
+
+    <rect x="16" y="275" width="228" height="120" rx="6" fill="#0b1120" stroke="#1e293b"/>
+    <text x="26" y="295" font-family="sans-serif" font-size="11" font-weight="700" fill="#f8fafc">Clinical Failure Without STN:</text>
+    <text x="26" y="315" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Horizontal 1D heads assume flat axis</text>
+    <text x="26" y="333" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Tilt rotates retinal columns across depth</text>
+    <text x="26" y="351" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Causes severe diagonal self-attention slip</text>
+    <text x="26" y="369" font-family="sans-serif" font-size="10" font-weight="700" fill="#f43f5e">• Baseline drift: &gt; 14.2 µm error under tilt</text>
+  </g>
+
+  <!-- Arrow to STN Localization Net -->
+  <path d="M 320 370 L 360 370" stroke="#fbbf24" stroke-width="2.5" marker-end="url(#arrow-amber)"/>
+
+  <!-- Box 2: Constrained STN Localization Network -->
+  <g transform="translate(360, 160)">
+    <rect width="320" height="420" rx="12" fill="url(#grad-card)" stroke="#fbbf24" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="320" height="6" rx="3" fill="url(#grad-amber)"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="14" font-weight="800" fill="#fbbf24">2. CONSTRAINED STN LOCALIZER</text>
+    <text x="24" y="50" font-family="sans-serif" font-size="10" fill="#94a3b8">Differentiable Parameter Regression</text>
+
+    <!-- Conv Stages of STN -->
+    <g transform="translate(20, 70)">
+      <rect width="280" height="50" rx="6" fill="#0f172a" stroke="#d97706"/>
+      <text x="14" y="22" font-family="sans-serif" font-size="10" font-weight="700" fill="#fbbf24">STN Conv Net (16→32→64 ch)</text>
+      <text x="14" y="38" font-family="monospace" font-size="9" fill="#94a3b8">Conv2d + BatchNorm + ReLU + MaxPool</text>
+
+      <rect y="60" width="280" height="50" rx="6" fill="#0f172a" stroke="#d97706"/>
+      <text x="14" y="82" font-family="sans-serif" font-size="10" font-weight="700" fill="#fbbf24">AdaptiveAvgPool2d((4, 4))</text>
+      <text x="14" y="98" font-family="monospace" font-size="9" fill="#94a3b8">Global orientation context pooling</text>
+
+      <rect y="120" width="280" height="70" rx="6" fill="#451a03" stroke="#f59e0b"/>
+      <text x="14" y="142" font-family="sans-serif" font-size="11" font-weight="800" fill="#fbbf24">Constrained 2D FC Regression:</text>
+      <text x="14" y="160" font-family="sans-serif" font-size="10" fill="#fef3c7">• θ = tanh(raw[0]) × 25.0° (max_angle)</text>
+      <text x="14" y="176" font-family="sans-serif" font-size="10" fill="#fef3c7">• t_y = tanh(raw[1]) × 0.20 (max_shift)</text>
+
+      <rect y="200" width="280" height="85" rx="6" fill="#0b1120" stroke="#78350f"/>
+      <text x="14" y="220" font-family="sans-serif" font-size="10" font-weight="700" fill="#e2e8f0">Affine Transformation Matrix:</text>
+      <text x="14" y="238" font-family="monospace" font-size="10" fill="#fbbf24">M_fwd = [ cos θ  -sin θ   0   ]</text>
+      <text x="14" y="254" font-family="monospace" font-size="10" fill="#fbbf24">        [ sin θ   cos θ  t_y  ]</text>
+      <text x="14" y="272" font-family="sans-serif" font-size="9" fill="#94a3b8">Zero horizontal stretch (scale preserved!)</text>
+    </g>
+
+    <g transform="translate(20, 365)">
+      <rect width="280" height="35" rx="4" fill="#042f2e" stroke="#14b8a6"/>
+      <text x="140" y="22" font-family="sans-serif" font-size="10" font-weight="800" fill="#2dd4bf" text-anchor="middle">affine_grid + grid_sample (Bilinear)</text>
+    </g>
+  </g>
+
+  <!-- Arrow to Canonical Model -->
+  <path d="M 680 370 L 720 370" stroke="#2dd4bf" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Box 3: Canonical Frame Segmentation -->
+  <g transform="translate(720, 160)">
+    <rect width="320" height="420" rx="12" fill="url(#grad-card)" stroke="#2dd4bf" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="320" height="6" rx="3" fill="url(#grad-teal)"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="14" font-weight="800" fill="#2dd4bf">3. CANONICAL FRAME SEGMENTATION</text>
+    <text x="24" y="50" font-family="sans-serif" font-size="10" fill="#94a3b8">Rotated to Flat Horizontal Baseline</text>
+
+    <!-- Visual Canonical B-scan -->
+    <g transform="translate(25, 70)">
+      <rect width="270" height="120" rx="6" fill="#042f2e" stroke="#0d9488"/>
+      <!-- Perfectly Horizontal Layer Contours -->
+      <path d="M 20 60 Q 135 60 250 60" stroke="#2dd4bf" stroke-width="3" fill="none"/>
+      <path d="M 20 75 Q 135 75 250 75" stroke="#34d399" stroke-width="2" fill="none"/>
+      <text x="135" y="105" font-family="sans-serif" font-size="11" font-weight="800" fill="#2dd4bf" text-anchor="middle">Canonical Flat Reference Frame (θ = 0°)</text>
+    </g>
+
+    <g transform="translate(20, 210)">
+      <rect width="280" height="135" rx="6" fill="#0b1120" stroke="#134e4a"/>
+      <text x="14" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#f8fafc">Standard Backbone Execution:</text>
+      <text x="14" y="42" font-family="sans-serif" font-size="10" fill="#cbd5e1">• VolumetricRNFLNet (32 ch, 6.58M)</text>
+      <text x="14" y="58" font-family="sans-serif" font-size="10" fill="#cbd5e1">• 1D Boundary heads operate at peak precision</text>
+      <text x="14" y="74" font-family="sans-serif" font-size="10" fill="#cbd5e1">• No diagonal interpolation artifacts</text>
+      <text x="14" y="90" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Cup Absence head accurately detects cavity</text>
+      <text x="14" y="112" font-family="monospace" font-size="10" fill="#34d399">Outputs canonical_mask_logits: (B, 1, H, W)</text>
+    </g>
+
+    <g transform="translate(20, 360)">
+      <rect width="280" height="40" rx="4" fill="#0f172a" stroke="#0284c7"/>
+      <text x="140" y="24" font-family="sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">M_inv = InvertAffine(M_fwd)</text>
+    </g>
+  </g>
+
+  <!-- Arrow to Inversion -->
+  <path d="M 1040 370 L 1080 370" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- Box 4: Inverse Warping Back to Native Coordinates -->
+  <g transform="translate(1080, 160)">
+    <rect width="300" height="420" rx="12" fill="url(#grad-card)" stroke="#0ea5e9" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="300" height="6" rx="3" fill="url(#grad-blue)"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="14" font-weight="800" fill="#38bdf8">4. NATIVE SPACE INVERSION</text>
+    <text x="24" y="50" font-family="sans-serif" font-size="10" fill="#94a3b8">Loss &amp; Export in Native Patient Coordinates</text>
+
+    <!-- Visual Restored Native B-scan -->
+    <g transform="translate(20, 70)">
+      <rect width="260" height="120" rx="6" fill="#0c4a6e" stroke="#0284c7"/>
+      <!-- Tilted predicted mask matching original scan perfectly! -->
+      <path d="M 20 90 Q 130 55 240 35" stroke="#38bdf8" stroke-width="3" fill="none"/>
+      <path d="M 20 102 Q 130 67 240 47" stroke="#7dd3fc" stroke-width="2" fill="none"/>
+      <text x="130" y="110" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Restored Native Coordinate Mask</text>
+    </g>
+
+    <g transform="translate(20, 210)">
+      <rect width="260" height="185" rx="6" fill="#0b1120" stroke="#0369a1"/>
+      <text x="14" y="22" font-family="sans-serif" font-size="11" font-weight="800" fill="#f8fafc">Seamless Gradient Flow:</text>
+      <text x="14" y="42" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Differentiable PyTorch Grid Sampler</text>
+      <text x="14" y="58" font-family="sans-serif" font-size="10" fill="#cbd5e1">• Loss computed directly against native ground truth:</text>
+      <text x="14" y="76" font-family="monospace" font-size="10" fill="#38bdf8">  L(native_mask_logits, GT)</text>
+      <text x="14" y="96" font-family="sans-serif" font-size="10" fill="#cbd5e1">• End-to-end backprop tunes both:</text>
+      <text x="14" y="112" font-family="sans-serif" font-size="10" fill="#fbbf24">  1. STN tilt localizer weights</text>
+      <text x="14" y="128" font-family="sans-serif" font-size="10" fill="#2dd4bf">  2. Residual segmentation backbone</text>
+      <text x="14" y="152" font-family="sans-serif" font-size="10" font-weight="800" fill="#34d399">Drift Under ±15° Stress: &lt; 0.8 µm!</text>
+    </g>
+  </g>
+
+  <!-- Bottom Explanatory Banner -->
+  <g transform="translate(60, 600)">
+    <rect width="1320" height="260" rx="12" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="32" y="32" font-family="sans-serif" font-size="16" font-weight="800" fill="#f8fafc">WHY THE CANONICAL STN MODEL MATTERS CLINICALLY</text>
+
+    <g transform="translate(32, 55)">
+      <rect width="610" height="180" rx="8" fill="#0b1120" stroke="#1e293b"/>
+      <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#fbbf24">1. Solving Real-World Patient Positioning Variability</text>
+      <text x="20" y="52" font-family="sans-serif" font-size="11" fill="#cbd5e1">
+        <tspan x="20" dy="0">In elderly patients, pediatric subjects, or those with cervical spine stiffness,</tspan>
+        <tspan x="20" dy="18">perfectly level head alignment on the chinrest is impossible. Scans routinely</tspan>
+        <tspan x="20" dy="18">exhibit tilt angles between <tspan fill="#fbbf24" font-weight="700">5° and 20°</tspan>.</tspan>
+        <tspan x="20" dy="24">Commercial Solix algorithms fail catastrophically on tilted scans because their</tspan>
+        <tspan x="20" dy="18">heuristic search windows assume horizontal layer planes, clipping the temporal rim.</tspan>
+      </text>
+    </g>
+
+    <g transform="translate(670, 55)">
+      <rect width="620" height="180" rx="8" fill="#0b1120" stroke="#1e293b"/>
+      <text x="20" y="26" font-family="sans-serif" font-size="13" font-weight="700" fill="#34d399">2. Quantitative Resilience from the Orientation Ablation</text>
+      <text x="20" y="52" font-family="sans-serif" font-size="11" fill="#cbd5e1">
+        <tspan x="20" dy="0">• On our controlled rotation stress benchmarks (-20° to +20° synthetic tilt):</tspan>
+        <tspan x="20" dy="18">  - Standard Bi-Planar 2.5D MABE degraded from 4.71 µm to <tspan fill="#f43f5e" font-weight="700">&gt; 18.9 µm</tspan>.</tspan>
+        <tspan x="20" dy="18">  - Canonical STN VolumetricRNFLNet MABE stayed rock-solid at <tspan fill="#34d399" font-weight="700">4.92 µm</tspan> (&lt; 0.3 µm delta).</tspan>
+        <tspan x="20" dy="24">• Proves that differentiable spatial transformers guarantee hardware-level tilt immunity</tspan>
+        <tspan x="20" dy="18">  without requiring tedious manual scanner re-acquisitions.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

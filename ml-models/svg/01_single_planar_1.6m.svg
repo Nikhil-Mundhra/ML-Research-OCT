@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 860" width="100%" height="100%">
+  
+  <defs>
+    <linearGradient id="grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="grad-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="grad-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </linearGradient>
+    <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="grad-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#2dd4bf" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#c084fc" />
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#fbbf24" />
+    </marker>
+    <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#fb7185" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1360" height="860" fill="url(#grad-bg)"/>
+  
+  <g opacity="0.05">
+    <path d="M 0 0 L 0 860 M 40 0 L 40 860 M 80 0 L 80 860 M 120 0 L 120 860 M 160 0 L 160 860 M 200 0 L 200 860 M 240 0 L 240 860 M 280 0 L 280 860 M 320 0 L 320 860 M 360 0 L 360 860 M 400 0 L 400 860 M 440 0 L 440 860 M 480 0 L 480 860 M 520 0 L 520 860 M 560 0 L 560 860 M 600 0 L 600 860 M 640 0 L 640 860 M 680 0 L 680 860 M 720 0 L 720 860 M 760 0 L 760 860 M 800 0 L 800 860 M 840 0 L 840 860 M 880 0 L 880 860 M 920 0 L 920 860 M 960 0 L 960 860 M 1000 0 L 1000 860 M 1040 0 L 1040 860 M 1080 0 L 1080 860 M 1120 0 L 1120 860 M 1160 0 L 1160 860 M 1200 0 L 1200 860 M 1240 0 L 1240 860 M 1280 0 L 1280 860 M 1320 0 L 1320 860" stroke="#94a3b8" stroke-width="1"/>
+    <path d="M 0 0 L 1360 0 M 0 40 L 1360 40 M 0 80 L 1360 80 M 0 120 L 1360 120 M 0 160 L 1360 160 M 0 200 L 1360 200 M 0 240 L 1360 240 M 0 280 L 1360 280 M 0 320 L 1360 320 M 0 360 L 1360 360 M 0 400 L 1360 400 M 0 440 L 1360 440 M 0 480 L 1360 480 M 0 520 L 1360 520 M 0 560 L 1360 560 M 0 600 L 1360 600 M 0 640 L 1360 640 M 0 680 L 1360 680 M 0 720 L 1360 720 M 0 760 L 1360 760 M 0 800 L 1360 800 M 0 840 L 1360 840" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+
+  <!-- Header -->
+  <g transform="translate(60, 40)">
+    <rect width="1240" height="85" rx="12" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="8" height="85" rx="4" fill="url(#grad-blue)"/>
+    <text x="32" y="36" font-family="sans-serif" font-size="22" font-weight="800" fill="#f8fafc">MODEL 1: SINGLE-PLANAR 2.5D RESIDUAL U-NET (1.67M PARAMETERS)</text>
+    <text x="32" y="62" font-family="sans-serif" font-size="13" font-weight="500" fill="#94a3b8">Baseline Volumetric Architecture: Multi-Slice 2.5D Input Slab, Residual Units, Multi-Task 1D Continuous Surface Heads</text>
+    <rect x="1040" y="24" width="168" height="36" rx="6" fill="#0f172a" stroke="#38bdf8"/>
+    <text x="1124" y="47" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle">1,672,021 PARAMS</text>
+  </g>
+
+  <!-- Input OCT Slab -->
+  <g transform="translate(60, 160)">
+    <rect width="180" height="340" rx="10" fill="url(#grad-card)" stroke="#38bdf8" stroke-width="1.8" filter="url(#shadow)"/>
+    <rect width="180" height="6" rx="3" fill="url(#grad-blue)"/>
+    <text x="90" y="32" font-family="sans-serif" font-size="13" font-weight="800" fill="#38bdf8" text-anchor="middle">2.5D INPUT SLAB</text>
+    <text x="90" y="52" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">5 Context B-Scans</text>
+
+    <!-- Visual Slices Stack -->
+    <g transform="translate(25, 75)">
+      <rect x="30" y="0" width="80" height="150" rx="4" fill="#1e293b" stroke="#475569" opacity="0.6"/>
+      <rect x="20" y="10" width="80" height="150" rx="4" fill="#1e293b" stroke="#475569" opacity="0.8"/>
+      <rect x="10" y="20" width="80" height="150" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="50" y="85" font-family="sans-serif" font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">Slice z</text>
+      <text x="50" y="105" font-family="sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">(768 × 320)</text>
+    </g>
+
+    <rect x="15" y="255" width="150" height="65" rx="6" fill="#0b1120" stroke="#1e293b"/>
+    <text x="25" y="275" font-family="sans-serif" font-size="10" font-weight="700" fill="#f8fafc">Tensor Dimensions:</text>
+    <text x="25" y="293" font-family="monospace" font-size="11" font-weight="700" fill="#38bdf8">(B, 5, 768, 320)</text>
+    <text x="25" y="310" font-family="sans-serif" font-size="9" fill="#94a3b8">Slow-axis Z window: ±2</text>
+  </g>
+
+  <!-- Flow Arrow to Encoder -->
+  <line x1="240" y1="330" x2="280" y2="330" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- U-Net Backbone -->
+  <!-- Encoder Column -->
+  <g transform="translate(290, 160)">
+    <rect width="180" height="340" rx="10" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="90" y="28" font-family="sans-serif" font-size="13" font-weight="800" fill="#f8fafc" text-anchor="middle">ENCODER STAGES</text>
+    <text x="90" y="46" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">MONAI Residual Units (num=2)</text>
+
+    <!-- Stage 0 -->
+    <rect x="15" y="60" width="150" height="48" rx="6" fill="#0f172a" stroke="#0284c7"/>
+    <text x="25" y="78" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8">Stage 0 (16 ch)</text>
+    <text x="25" y="95" font-family="monospace" font-size="10" fill="#94a3b8">(B, 16, 768, 320)</text>
+
+    <!-- Stage 1 -->
+    <rect x="15" y="120" width="150" height="48" rx="6" fill="#0f172a" stroke="#0284c7"/>
+    <text x="25" y="138" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8">Stage 1 (32 ch)</text>
+    <text x="25" y="155" font-family="monospace" font-size="10" fill="#94a3b8">(B, 32, 384, 160)</text>
+
+    <!-- Stage 2 -->
+    <rect x="15" y="180" width="150" height="48" rx="6" fill="#0f172a" stroke="#0284c7"/>
+    <text x="25" y="198" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8">Stage 2 (64 ch)</text>
+    <text x="25" y="215" font-family="monospace" font-size="10" fill="#94a3b8">(B, 64, 192, 80)</text>
+
+    <!-- Stage 3 -->
+    <rect x="15" y="240" width="150" height="48" rx="6" fill="#0f172a" stroke="#0284c7"/>
+    <text x="25" y="258" font-family="sans-serif" font-size="11" font-weight="700" fill="#38bdf8">Stage 3 (128 ch)</text>
+    <text x="25" y="275" font-family="monospace" font-size="10" fill="#94a3b8">(B, 128, 96, 40)</text>
+  </g>
+
+  <!-- Down Arrow to Bottleneck -->
+  <line x1="380" y1="500" x2="380" y2="540" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+  <!-- Bottleneck Box -->
+  <g transform="translate(290, 550)">
+    <rect width="400" height="75" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.8" filter="url(#shadow)"/>
+    <text x="200" y="28" font-family="sans-serif" font-size="13" font-weight="800" fill="#a5b4fc" text-anchor="middle">BOTTLENECK STAGE (256 CHANNELS)</text>
+    <text x="200" y="48" font-family="monospace" font-size="12" font-weight="700" fill="#c7d2fe" text-anchor="middle">Shape: (B, 256, 48, 20) | Downsample: Stride (2, 2)</text>
+    <text x="200" y="65" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Dual Residual Units + Dropout(0.1)</text>
+  </g>
+
+  <!-- Up Arrow to Decoder -->
+  <line x1="600" y1="550" x2="600" y2="505" stroke="#2dd4bf" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Skip Connections -->
+  <path d="M 440 204 L 510 204" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+  <path d="M 440 264 L 510 264" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <!-- Decoder Column -->
+  <g transform="translate(510, 160)">
+    <rect width="180" height="340" rx="10" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="90" y="28" font-family="sans-serif" font-size="13" font-weight="800" fill="#f8fafc" text-anchor="middle">DECODER STAGES</text>
+    <text x="90" y="46" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Transposed Convs + Residual Blocks</text>
+
+    <!-- UpStage 3 -->
+    <rect x="15" y="240" width="150" height="48" rx="6" fill="#042f2e" stroke="#0d9488"/>
+    <text x="25" y="258" font-family="sans-serif" font-size="11" font-weight="700" fill="#2dd4bf">UpStage 3 (128 ch)</text>
+    <text x="25" y="275" font-family="monospace" font-size="10" fill="#94a3b8">(B, 128, 96, 40)</text>
+
+    <!-- UpStage 2 -->
+    <rect x="15" y="180" width="150" height="48" rx="6" fill="#042f2e" stroke="#0d9488"/>
+    <text x="25" y="198" font-family="sans-serif" font-size="11" font-weight="700" fill="#2dd4bf">UpStage 2 (64 ch)</text>
+    <text x="25" y="215" font-family="monospace" font-size="10" fill="#94a3b8">(B, 64, 192, 80)</text>
+
+    <!-- UpStage 1 -->
+    <rect x="15" y="120" width="150" height="48" rx="6" fill="#042f2e" stroke="#0d9488"/>
+    <text x="25" y="138" font-family="sans-serif" font-size="11" font-weight="700" fill="#2dd4bf">UpStage 1 (32 ch)</text>
+    <text x="25" y="155" font-family="monospace" font-size="10" fill="#94a3b8">(B, 32, 384, 160)</text>
+
+    <!-- UpStage 0 Final Features -->
+    <rect x="15" y="60" width="150" height="48" rx="6" fill="#042f2e" stroke="#14b8a6"/>
+    <text x="25" y="78" font-family="sans-serif" font-size="11" font-weight="800" fill="#2dd4bf">Final Feats (16 ch)</text>
+    <text x="25" y="95" font-family="monospace" font-size="10" fill="#5eead4">(B, 16, 768, 320)</text>
+  </g>
+
+  <!-- Forking to Multi-Task Heads -->
+  <path d="M 690 184 L 750 184" stroke="#2dd4bf" stroke-width="2.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Multi-Task Heads Container -->
+  <g transform="translate(760, 160)">
+    <rect width="540" height="465" rx="12" fill="url(#grad-card)" stroke="#14b8a6" stroke-width="1.8" filter="url(#shadow)"/>
+    <rect width="540" height="6" rx="3" fill="url(#grad-teal)"/>
+    <text x="24" y="32" font-family="sans-serif" font-size="15" font-weight="800" fill="#2dd4bf">MULTI-TASK HEADS (Branching from 16-channel Feats)</text>
+    <text x="24" y="50" font-family="sans-serif" font-size="11" fill="#94a3b8">Joint Optimization: Voxel Logits + 1D Continuous Boundary Regression + Cup Absence</text>
+
+    <!-- Head 1: Dense 2D Mask Head -->
+    <g transform="translate(20, 68)">
+      <rect width="500" height="95" rx="8" fill="#0b1120" stroke="#0284c7" stroke-width="1.2"/>
+      <text x="18" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8">1. Dense Voxel Mask Head</text>
+      <text x="18" y="44" font-family="monospace" font-size="11" fill="#cbd5e1">Conv2d(16 → 1, 1x1) → mask_logits: (B, 1, 768, 320)</text>
+      <text x="18" y="64" font-family="sans-serif" font-size="10" fill="#94a3b8">Differentiable column thickness: column_thickness = Σ σ(mask_logits) over H (768)</text>
+      <rect x="360" y="16" width="125" height="26" rx="4" fill="#0369a1"/>
+      <text x="422" y="33" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">VOXEL LABELMAP</text>
+    </g>
+
+    <!-- Head 2: 1D Boundary Regression Head -->
+    <g transform="translate(20, 175)">
+      <rect width="500" height="150" rx="8" fill="#0b1120" stroke="#059669" stroke-width="1.2"/>
+      <text x="18" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#34d399">2. 1D Continuous Boundary Regression Head</text>
+      <text x="18" y="44" font-family="monospace" font-size="11" fill="#cbd5e1">AdaptiveAvgPool2d((1, 320)) → Squeeze → (B, 16, 320)</text>
+      <text x="18" y="64" font-family="sans-serif" font-size="10" fill="#94a3b8">Branch A: Conv1d(16→64→32→1, k=7,5,3) → ilm_pred = σ(raw) × 768  [Row px]</text>
+      <text x="18" y="84" font-family="sans-serif" font-size="10" fill="#94a3b8">Branch B: Conv1d(16→64→32→1, k=7,5,3) → nfl_pred = σ(raw) × 768  [Row px]</text>
+      <text x="18" y="104" font-family="sans-serif" font-size="10" fill="#94a3b8">Branch C: Conv1d(16→32→1, k=7,3)       → cup_logits: (B, 320)  [Cavity presence]</text>
+      
+      <rect x="360" y="16" width="125" height="26" rx="4" fill="#047857"/>
+      <text x="422" y="33" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">EXPLICIT CURVES</text>
+      <text x="18" y="132" font-family="sans-serif" font-size="10" font-weight="700" fill="#6ee7b7">Bypasses argmax discretization! Yields sub-voxel continuous depths.</text>
+    </g>
+
+    <!-- Head 3: Loss Formulations -->
+    <g transform="translate(20, 335)">
+      <rect width="500" height="110" rx="8" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.2"/>
+      <text x="18" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#a5b4fc">3. Multi-Objective Joint Loss</text>
+      <text x="18" y="46" font-family="monospace" font-size="11" font-weight="700" fill="#e0e7ff">L_total = L_Tversky + 0.5·L_BCE_mask + 1.0·L_boundary + 0.2·L_cup + 0.1·L_edge</text>
+      <text x="18" y="68" font-family="sans-serif" font-size="10" fill="#c7d2fe">• Tversky Loss handles severe class imbalance (RNFL is &lt;4% of total slice area)</text>
+      <text x="18" y="86" font-family="sans-serif" font-size="10" fill="#c7d2fe">• Edge Loss (Sobel optical gradient) snaps curves to true physical tissue reflectances</text>
+    </g>
+  </g>
+
+  <!-- Bottom Explanatory Banner -->
+  <g transform="translate(60, 650)">
+    <rect width="1240" height="165" rx="12" fill="url(#grad-card)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="28" y="32" font-family="sans-serif" font-size="14" font-weight="800" fill="#f8fafc">WHY SINGLE-PLANAR 1.6M WAS INSUFFICIENT FOR FRONTIER CLINICAL USE</text>
+    
+    <g transform="translate(28, 50)">
+      <circle cx="12" cy="12" r="8" fill="#f43f5e"/>
+      <text x="12" y="16" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">!</text>
+      <text x="30" y="16" font-family="sans-serif" font-size="12" font-weight="700" fill="#fda4af">Inter-B-Scan Anisotropy:</text>
+      <text x="30" y="34" font-family="sans-serif" font-size="11" fill="#94a3b8">
+        Solix OCT acquires 128 B-scans with lateral spacing ~18.7 µm but inter-B-scan slow-axis spacing ~40 µm. Single-planar models process slices
+        independently along X-Z. Without vertical orthogonal cross-checks, predicted en face thickness maps exhibited severe "sawtooth" banding.
+      </text>
+    </g>
+
+    <g transform="translate(28, 105)">
+      <circle cx="12" cy="12" r="8" fill="#f43f5e"/>
+      <text x="12" y="16" font-family="sans-serif" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">!</text>
+      <text x="30" y="16" font-family="sans-serif" font-size="12" font-weight="700" fill="#fda4af">Held-Out Error Distribution:</text>
+      <text x="30" y="34" font-family="sans-serif" font-size="11" fill="#94a3b8">
+        Achieved median MABE of 12.58 µm and Dice of 0.8055 on held-out cohort (V2 split). This proved that multi-slice context alone (5 slices)
+        was not enough to bridge the optic cup gap or correct commercial heuristic errors without orthogonal cross-validation.
+      </text>
+    </g>
+  </g>
+</svg>
